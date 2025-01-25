@@ -1,7 +1,7 @@
 
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
                             QMessageBox, QPlainTextEdit, QHBoxLayout,
-                            QLineEdit, QComboBox)
+                            QLineEdit, QComboBox, QLabel)
 from PyQt5.QtGui import QIcon
 from PyQt5 import QtCore
 
@@ -12,6 +12,7 @@ class View(QWidget) :
         self.initUI()
     
     def initUI(self) :
+        self.lbl1 = QLabel("v2.3.0", self)
         self.btn1 = QPushButton("Calc", self)
         self.btn2 = QPushButton("Reset", self)
         
@@ -30,7 +31,7 @@ class View(QWidget) :
         self.cb.addItems(["+","-","*","/"]) # 콤보박스의 연산자
 
         hbox = QHBoxLayout()    # 수평 박스 레이아웃 추가
-        hbox.addStretch(1)      # 공백을 추가한다
+        hbox.addWidget(self.lbl1)      # 공백을 추가한다
         hbox.addWidget(self.btn1)
         hbox.addWidget(self.btn2)
 
