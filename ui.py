@@ -2,7 +2,7 @@
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
                             QMessageBox, QPlainTextEdit, QHBoxLayout,
                             QLineEdit, QComboBox, QLabel)
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QFont
 from PyQt5 import QtCore
 
 class View(QWidget) :
@@ -13,6 +13,7 @@ class View(QWidget) :
     
     def initUI(self) :
         self.lbl1 = QLabel("v2.3.0", self)
+        self.lbl1.setFont(QFont("Consolas",10))
         self.btn1 = QPushButton("Calc", self)
         self.btn2 = QPushButton("Reset", self)
         
